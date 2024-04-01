@@ -11,7 +11,6 @@ penguin_file = st.file_uploader('Select Your Local Penguins CSV (default provide
 
 @st.cache_data()
 def load_file(penguin_file):
-    time.sleep(3)
     if penguin_file is not None:
         penguins_df = pd.read_csv(penguin_file)
     else: 
