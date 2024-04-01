@@ -13,10 +13,11 @@ penguin_file = st.file_uploader('Select Your Local Penguins CSV (default provide
 def load_file(penguin_file):
     time.sleep(3)
     if penguin_file is not None:
-        df = pd.read_csv(penguin_file)
+        penguins_df = pd.read_csv(penguin_file)
     else: 
-        df = pd.read_csv('penguins.csv')
-    return(df)
+        penguins_df = pd.read_csv('penguins.csv')
+    return(penguins_df)
+
 penguins_df = load_file(penguin_file)
 
 selected_x_var = st.selectbox('What do you want the x variable to be?',
